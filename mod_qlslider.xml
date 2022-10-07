@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" version="1.2.0" client="site" method="upgrade">
+<extension type="module" version="1.2.1" client="site" method="upgrade">
     <name>qlslider</name>
     <creationDate>March 2022</creationDate>
     <author>ql.de</author>
@@ -7,7 +7,7 @@
     <license>http://www.gnu.org/licenses GNU/GPL</license>
     <authorEmail>mareike.riegel@ql.de</authorEmail>
     <authorUrl>http://ql.de</authorUrl>
-    <version>1.2.0</version>
+    <version>1.2.1</version>
     <description>qlslider module</description>
     <scriptfile>script.php</scriptfile>
     <updateservers>
@@ -36,8 +36,7 @@
         <language tag="de-DE">language/de-DE/de-DE.mod_qlslider.sys.ini</language>
     </languages>
     <config>
-        <fields name="params"
-                addfieldpath="/modules/mod_qlslider/php/fields">
+        <fields name="params">
             <fieldset name="basic">
                 <field name="image_folder" type="text" default="images/sampledata/fruitshop" size="50"
                        label="MOD_QLSLIDER_FOLDER_LABEL" description="MOD_QLSLIDER_FOLDER_DESC" />
