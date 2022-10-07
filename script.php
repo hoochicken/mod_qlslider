@@ -1,9 +1,9 @@
 <?php
 /**
- * @package		mod_qlslider
- * @copyright	Copyright (C) 2017 ql.de All rights reserved.
- * @author 		Mareike Riegel mareike.riegel@ql.de
- * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ * @package        mod_qlslider
+ * @copyright    Copyright (C) 2022 ql.de All rights reserved.
+ * @author        Mareike Riegel mareike.riegel@ql.de
+ * @license        GNU General Public License version 2 or later; see LICENSE.txt
  */
 // No direct access to this file
 defined('_JEXEC') or die;
@@ -21,7 +21,7 @@ class mod_qlsliderInstallerScript
      */
     function install($parent)
     {
-        echo '<p>'.JText::_('MOD_QLSLIDER_INSTALL_INSTALL').'</p>';
+        echo '<p>' . JText::_('MOD_QLSLIDER_INSTALL_INSTALL') . '</p>';
     }
 
     /**
@@ -32,7 +32,7 @@ class mod_qlsliderInstallerScript
      */
     function uninstall($parent)
     {
-        echo '<p>'.JText::_('MOD_QLSLIDER_INSTALL_UNINSTALL').'</p>';
+        echo '<p>' . JText::_('MOD_QLSLIDER_INSTALL_UNINSTALL') . '</p>';
     }
 
     /**
@@ -43,8 +43,8 @@ class mod_qlsliderInstallerScript
      */
     function update($parent)
     {
-        echo '<p>'.JText::sprintf('MOD_QLSLIDER_INSTALL_UPDATE',$parent->get('manifest')->version).'</p>';
-	}
+        echo '<p>' . JText::sprintf('MOD_QLSLIDER_INSTALL_UPDATE', $parent->get('manifest')->version) . '</p>';
+    }
 
     /**
      * Method to run before an install/update/uninstall method

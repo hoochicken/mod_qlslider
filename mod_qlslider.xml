@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<extension type="module" version="3.7" client="site" method="upgrade">
+<extension type="module" version="1.2.0" client="site" method="upgrade">
     <name>qlslider</name>
-    <creationDate>March 2017</creationDate>
+    <creationDate>March 2022</creationDate>
     <author>ql.de</author>
-    <copyright>Copyright (C) 2017. All rights reserved.</copyright>
+    <copyright>Copyright (C) 2022. All rights reserved.</copyright>
     <license>http://www.gnu.org/licenses GNU/GPL</license>
     <authorEmail>mareike.riegel@ql.de</authorEmail>
     <authorUrl>http://ql.de</authorUrl>
-    <version>1.1.0</version>
+    <version>1.2.0</version>
     <description>qlslider module</description>
     <scriptfile>script.php</scriptfile>
     <updateservers>
-        <server type="extension" priority="1" name="qlslider - Updates"><![CDATA[https://www.blackforest-software.com/_scripts/updates/mod_qlslider.xml]]></server>
+        <server type="extension" priority="1" name="qlslider - Updates">https://raw.githubusercontent.com/hoochicken/mod_qlslider/main/_jupdate/mod_qlslider.xml</server>
     </updateservers>
     <files>
         <filename module="mod_qlslider">mod_qlslider.php</filename>
