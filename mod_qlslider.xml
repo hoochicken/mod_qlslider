@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="module" version="3.7" client="site" method="upgrade">
+    <name>qlslider</name>
+    <creationDate>March 2017</creationDate>
+    <author>ql.de</author>
+    <copyright>Copyright (C) 2017. All rights reserved.</copyright>
+    <license>http://www.gnu.org/licenses GNU/GPL</license>
+    <authorEmail>mareike.riegel@ql.de</authorEmail>
+    <authorUrl>http://ql.de</authorUrl>
+    <version>1.1.0</version>
+    <description>qlslider module</description>
+    <scriptfile>script.php</scriptfile>
+    <updateservers>
+        <server type="extension" priority="1" name="qlslider - Updates"><![CDATA[https://www.blackforest-software.com/_scripts/updates/mod_qlslider.xml]]></server>
+    </updateservers>
+    <files>
+        <filename module="mod_qlslider">mod_qlslider.php</filename>
+        <filename>mod_qlslider.xml</filename>
+        <filename>helper.php</filename>
+        <filename>script.php</filename>
+        <filename>index.html</filename>
+        <folder>language</folder>
+        <folder>tmpl</folder>
+        <folder>css</folder>
+        <folder>js</folder>
+    </files>
+    <media destination="mod_qlslider" folder="media">
+        <folder>css</folder>
+        <folder>js</folder>
+        <file>index.html</file>
+    </media>
+    <languages>
+        <language tag="en-GB">language/en-GB/en-GB.mod_qlslider.ini</language>
+        <language tag="en-GB">language/en-GB/en-GB.mod_qlslider.sys.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.mod_qlslider.ini</language>
+        <language tag="de-DE">language/de-DE/de-DE.mod_qlslider.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params"
+                addfieldpath="/modules/mod_qlslider/php/fields">
+            <fieldset name="basic">
+                <field name="image_folder" type="text" default="images/sampledata/fruitshop" size="50"
+                       label="MOD_QLSLIDER_FOLDER_LABEL" description="MOD_QLSLIDER_FOLDER_DESC" />
+                <field name="sort_by" type="list" default="1"
+                       label="MOD_QLSLIDER_ORDERING_LABEL"
+                       description="MOD_QLSLIDER_ORDERING_DESC">
+                    <option value="1">MOD_QLSLIDER_ORDERING_FILENAME</option>
+                    <option value="0">MOD_QLSLIDER_ORDERING_RANDOMISE</option>
+                </field>
+            </fieldset>
+            <fieldset name="display">
+                <field name="full_width" type="radio" class="btn-group" default="0"
+                       label="MOD_QLSLIDER_FULLWIDTH_LABEL" description="MOD_QLSLIDER_FULLWIDTH_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="image_width" type="text" default="240" size="10"
+                       label="MOD_QLSLIDER_SLIDEWIDTH_LABEL" description="MOD_QLSLIDER_SLIDEWIDTH_DESC" />
+                <field name="image_height" type="text" default="180" size="10"
+                       label="MOD_QLSLIDER_SLIDEHEIGHT_LABEL" description="MOD_QLSLIDER_SLIDEHEIGHT_DESC" />
+                <field name="fit_to" type="list" default="0"
+                       label="MOD_QLSLIDER_FITSIZE_LABEL" description="MOD_QLSLIDER_FITSIZE_DESC">
+                    <option value="0">MOD_QLSLIDER_FITSIZE_AUTO</option>
+                    <option value="1">MOD_QLSLIDER_FITSIZE_WIDTH</option>
+                    <option value="2">MOD_QLSLIDER_FITSIZE_HEIGHT</option>
+                </field>
+                <field name="image_centering" type="radio" class="btn-group" default="0"
+                       label="MOD_QLSLIDER_VERTICALCENTERING_LABEL"
+                       description="MOD_QLSLIDER_VERTICALCENTERING_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="visible_images" type="text" default="3" size="10"
+                       label="MOD_QLSLIDER_VISIBLEIMAGES_LABEL" description="MOD_QLSLIDER_VISIBLEIMAGES_DESC" />
+                <field name="image_margin" type="text" default="10" size="10" label="MOD_QLSLIDER_SPACEBETWEEN_LABEL" description="MOD_QLSLIDER_SPACEBETWEEN_DESC" />
+                <field name="max_images" type="text" default="20" size="10"
+                       label="MOD_QLSLIDER_MAXIMAGES_LABEL" description="MOD_QLSLIDER_MAXIMAGES_DESC" />
+            </fieldset>
+            <fieldset name="label">
+                <field name="show_title" type="radio" class="btn-group" default="0"
+                       label="MOD_QLSLIDER_SHOW_TITLE_LABEL" description="MOD_QLSLIDER_SHOW_TITLE_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="caption_color" default="#ffffff" type="color" label="MOD_QLSLIDER_COLOR_LABEL" description="MOD_QLSLIDER_COLOR_DESC" />
+                <field name="caption_bg" default="#000000" type="color" label="MOD_QLSLIDER_BACKGROUND_LABEL" description="MOD_QLSLIDER_BACKGROUND_DESC" />
+                <field name="caption_bgopacity" default="0.7" type="list" label="MOD_QLSLIDER_BACKGROUNDOPACITY_LABEL" description="MOD_QLSLIDER_BACKGROUNDOPACITY_DESC">
+                    <option value="0"></option>
+                    <option value="0.05"></option>
+                    <option value="0.10"></option>
+                    <option value="0.15"></option>
+                    <option value="0.20"></option>
+                    <option value="0.25"></option>
+                    <option value="0.30"></option>
+                    <option value="0.35"></option>
+                    <option value="0.40"></option>
+                    <option value="0.45"></option>
+                    <option value="0.50"></option>
+                    <option value="0.55"></option>
+                    <option value="0.60"></option>
+                    <option value="0.65"></option>
+                    <option value="0.70"></option>
+                    <option value="0.75"></option>
+                    <option value="0.80"></option>
+                    <option value="0.85"></option>
+                    <option value="0.90"></option>
+                    <option value="0.95"></option>
+                    <option value="1"></option>
+                </field>
+                <field name="link" type="text" default="" size="50"
+                       label="MOD_QLSLIDER_LINK_LABEL" description="MOD_QLSLIDER_LINK_DESC" />
+                <field name="iptc" type="radio" class="btn-group" default="0"
+                       label="MOD_QLSLIDER_IPTC_LABEL" description="MOD_QLSLIDER_IPTC_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field type="spacer" name="spacerdescription" label="MOD_QLSLIDER_SPACEDESCRIPTION_LABEL" description="MOD_QLSLIDER_SPACEDESCRIPTION_DESC" />
+                <field name="show_desc" type="radio" class="btn-group" default="0"
+                       label="MOD_QLSLIDER_SHOW_LABEL" description="MOD_QLSLIDER_SHOW_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="limit_desc" type="text" default="" size="10"
+                       label="MOD_QLSLIDER_LIMIT_LABEL" description="MOD_QLSLIDER_LIMIT_DESC" />
+            </fieldset>
+            <fieldset name="resizing">
+                <field name="spacerresize" type="spacer" label="MOD_QLSLIDER_SPACER_IMAGESCALE_LABEL" />
+                <field name="resize" type="radio" default="0" class="btn-group"
+                       label="MOD_QLSLIDER_RESIZE_LABEL" description="MOD_QLSLIDER_RESIZE_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="resize_width" type="text" default="800" filter="integer"
+                       label="MOD_QLSLIDER_RESIZEWIDTH_LABEL" description="MOD_QLSLIDER_RESIZEWIDTH_DESC">
+                </field>
+                <field name="resize_height" type="text" default="600" filter="integer"
+                       label="MOD_QLSLIDER_RESIZEHEIGHT_LABEL" description="MOD_QLSLIDER_RESIZEHEIGHT_DESC">
+                </field>
+                <field name="resize_force" type="radio" default="1" class="btn-group"
+                       label="MOD_QLSLIDER_RESIZEFORCE_LABEL" description="MOD_QLSLIDER_RESIZEFORCE_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="override_thumb" type="radio" default="1" class="btn-group"
+                       label="MOD_QLSLIDER_OVERRIDETHUMB_LABEL" description="MOD_QLSLIDER_OVERRIDETHUMB_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+                <field name="override_resized" type="radio" default="1" class="btn-group"
+                       label="MOD_QLSLIDER_OVERRIDERESIZED_LABEL" description="MOD_QLSLIDER_OVERRIDERESIZED_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field>
+            </fieldset>
+            <fieldset name="handling">
+                <!--field name="autoplay" type="radio" class="btn-group" default="1"
+                       label="MOD_QLSLIDER_AUTOPLAY_LABEL" description="MOD_QLSLIDER_AUTOPLAY_DESC">
+                    <option value="1">JYES</option>
+                    <option value="0">JNO</option>
+                </field-->
+                <field name="link_image" type="list" default="1"
+                       label="MOD_QLSLIDER_LINKBEHAVIOUR_LABEL" description="MOD_QLSLIDER_LINKBEHAVIOUR_DESC">
+                    <option value="0">MOD_QLSLIDER_LINKBEHAVIOUR_NOLINK</option>
+                    <option value="1">MOD_QLSLIDER_LINKBEHAVIOUR_HYPERLINK</option>
+                    <option value="2">MOD_QLSLIDER_LINKBEHAVIOUR_LIGHTBOX</option>
+                </field>
+            </fieldset>
+            <fieldset name="navigation">
+                <field name="navigationShow" type="radio" class="btn-group" default="1"
+                       label="MOD_QLSLIDER_NAVIGATIONSHOW_LABEL" description="MOD_QLSLIDER_NAVIGATIONSHOW_DESC">
+                    <option value="2">JYES</option>
+                    <option value="0">JNO</option>
+                    <option value="1">MOD_QLSLIDER_ONMOUSEOVER</option>
+                </field>
+                <field name="navigationColor" type="color" default="#000000"
+                       label="MOD_QLSLIDER_COLOR_LABEL" description="MOD_QLSLIDER_COLOR_DESC">
+                </field>
+                <field name="navigationBackground" type="color" default="#ffffff"
+                       label="MOD_QLSLIDER_BACKGROUND_LABEL" description="MOD_QLSLIDER_BACKGROUND_DESC">
+                </field>
+                <field name="navigationPosition" type="list" default="1"
+                       label="MOD_QLSLIDER_POSITION_LABEL" description="MOD_QLSLIDER_POSITION_DESC">
+                    <option value="1">MOD_QLSLIDER_POSITION_SUB</option>
+                    <option value="2">MOD_QLSLIDER_POSITION_SUBWITHIN</option>
+                    <option value="3">MOD_QLSLIDER_POSITION_OUTER</option>
+                    <!--option value="4">MOD_QLSLIDER_POSITION_OUTERWITHIN</option-->
+                </field>
+            </fieldset>
+            <fieldset name="advanced">
+                <field
+                        name="layout"
+                        type="modulelayout"
+                        label="JFIELD_ALT_LAYOUT_LABEL"
+                        description="JFIELD_ALT_MODULE_LAYOUT_DESC" />
+                <field
+                        name="moduleclass_sfx"
+                        type="text"
+                        label="COM_MODULES_FIELD_MODULECLASS_SFX_LABEL"
+                        description="COM_MODULES_FIELD_MODULECLASS_SFX_DESC" />
+                <field
+                        name="cache"
+                        type="list"
+                        default="1"
+                        label="COM_MODULES_FIELD_CACHING_LABEL"
+                        description="COM_MODULES_FIELD_CACHING_DESC">
+                    <option
+                            value="1">JGLOBAL_USE_GLOBAL</option>
+                    <option
+                            value="0">COM_MODULES_FIELD_VALUE_NOCACHING</option>
+                </field>
+                <field
+                        name="cache_time"
+                        type="text"
+                        default="900"
+                        label="COM_MODULES_FIELD_CACHE_TIME_LABEL"
+                        description="COM_MODULES_FIELD_CACHE_TIME_DESC" />
+            </fieldset>
+        </fields>
+    </config>
+</extension>

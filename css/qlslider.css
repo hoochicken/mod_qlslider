@@ -1,0 +1,25 @@
+/**
+ * @package		mod_qlslider
+ * @copyright	Copyright (C) 2017 ql.de All rights reserved.
+ * @author 		Mareike Riegel mareike.riegel@ql.de
+ * @license		GNU General Public License version 2 or later; see LICENSE.txt
+ */
+
+.qlslider .qlsliderContent {width:100%;overflow:hidden;float:none;margin:0 auto;}
+.qlslider .qlsliderContent .content {height:100%;}
+.qlslider .qlsliderContent .content .items {height:100%;}
+.qlslider .qlsliderContent .content .item {text-align:center;float:left;margin-right:10px;position:relative;height:100%;}
+.qlslider .qlsliderContent .content .item>a {display:block;position:relative;margin-left:auto;margin-right:auto;}
+.qlslider .qlsliderContent .content.centered1 .item>a {top: 50%;transform: translateY(-50%);}
+.qlslider .qlsliderContent .content .item .caption {position:absolute;bottom:0;padding:5px 10px;background:rgba(0,0,0,0.5);color:white;width:100%;box-sizing:border-box;}
+.qlslider .qlsliderContent .content .item .caption .title {font-weight:bold;}
+
+.qlslider .qlsliderNavigation a span {padding:10px;opacity:0.5;}
+
+.qlslider .qlsliderNavigation.pos1 {text-align:center;}
+.qlslider .qlsliderNavigation.pos2 {text-align:center;margin-top:-40px;}
+.qlslider .qlsliderNavigation.pos3 {position:relative;}
+.qlslider .qlsliderNavigation.pos3 a {position:absolute;bottom:0;display:block;}
+.qlslider .qlsliderNavigation.pos3 a {bottom:0;display:block;}
+.qlslider .qlsliderNavigation.pos3 a.prev {left:0;}
+.qlslider .qlsliderNavigation.pos3 a.next {right:0;}
